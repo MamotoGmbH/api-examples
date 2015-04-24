@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get Merchants by Id
@@ -11,7 +11,7 @@ use Mamoto\Api\Merchants;
 
 $id = 20378;
 
-$merchants = new Merchants();
+$merchants = new Merchants($config);
 // $merchants->setRawAnswer(true);
 $merchants->setId($id);
 $returnData = $merchants->get();

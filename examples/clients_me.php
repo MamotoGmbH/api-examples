@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get own client data
@@ -9,7 +9,7 @@ include_once '../vendor/autoload.php';
  */
 use Mamoto\Api\Clients;
 
-$clients = new Clients();
+$clients = new Clients($config);
 // $clients->setRawAnswer(true);
 $returnData = $clients->get();
 echo "Resultset:\n";

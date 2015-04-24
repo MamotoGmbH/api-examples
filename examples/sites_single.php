@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get site by defined id
@@ -12,7 +12,7 @@ use Mamoto\Api\Sites;
 // Amazon.de
 $id = 2;
 
-$sites = new Sites();
+$sites = new Sites($config);
 // $sites->setRawAnswer(true);
 $sites->setId($id);
 $returnData = $sites->get();

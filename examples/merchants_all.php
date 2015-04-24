@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get all Merchants
@@ -9,7 +9,7 @@ include_once '../vendor/autoload.php';
  */
 use Mamoto\Api\Merchants;
 
-$merchants = new Merchants();
+$merchants = new Merchants($config);
 // $merchants->setRawAnswer(true);
 $returnData = $merchants->getAll();
 echo "Resultset:\n";

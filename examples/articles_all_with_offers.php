@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get all Articles with offers
@@ -9,7 +9,7 @@ include_once '../vendor/autoload.php';
  */
 use Mamoto\Api\Articles;
 
-$articles = new Articles();
+$articles = new Articles($config);
 // $articles->setRawAnswer(true);
 $returnData = $articles->getAllWithOffers();
 echo "Resultset:\n";

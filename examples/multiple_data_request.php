@@ -1,6 +1,6 @@
 <?php
-// include autoloader
-include_once '../vendor/autoload.php';
+// include config file
+include_once __DIR__ . "/../config.php";
 
 /**
  * get all Articles
@@ -12,7 +12,7 @@ use Mamoto\Api\Currency;
 use Mamoto\Api\Sites;
 
 // get own Authentication object
-$auth = new Authentication();
+$auth = new Authentication($config);
 // authenticate client
 if ($auth->authenticate()) {
     echo "Use OAuth2 Data. Token-Type: " . $auth->getTokenType() . "; Access-Token: " . $auth->getAccessToken() . "\n";
