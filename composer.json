@@ -1,0 +1,15 @@
+{
+  "name" : "mamoto-net/sdk-php-examples",
+  "description" : "Mamoto SDK Examples for PHP",
+  "require" : {
+    "mamoto-net/sdk-php": "dev-master"
+  },
+  "authors" : [ {
+    "name" : "André Marthaler",
+    "email" : "am@mamoto.net",
+    "homepage" : "https://www.mamoto.net"
+  } ],
+  "keywords" : [ "mamoto", "sdk", "api", "rest" ],
+  "type" : "library",
+  "homepage" : "https://github.com/mamoto-net/sdk-php-examples"
+}
